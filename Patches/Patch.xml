@@ -520,6 +520,160 @@
 		</match>
 	</Operation>
 	
+	<!-- Megafauna -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Megafauna</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="BWP_FleeceBase">
+							<defName>BWP_mammothFleece</defName>
+							<label>woolly mammoth fleece</label>
+							<description>The untreated fleece of a Woolly Mammoth. It must be made into wool before it can be used.</description>
+							<graphicData>
+								<color>(93,73,53)</color>
+							</graphicData>
+							<stuffProps>
+								<color>(93,73,53)</color>
+							</stuffProps>
+							<butcherProducts>
+								<MammothWool>25</MammothWool>
+							</butcherProducts>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "MammothWool"]/woolDef</xpath>
+					<value>
+						<woolDef>BWP_mammothFleece</woolDef>
+					</value>
+				</li>	
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "WoollyMammoth"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "WoollyMammoth"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "WoollyMammoth"]/butcherProducts</xpath>
+					<value>
+						<BWP_mammothFleece>100</BWP_mammothFleece>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="BWP_FleeceBase">
+							<defName>BWP_elasmotheriumFleece</defName>
+							<label>elasmotherium fleece</label>
+							<description>The untreated fleece of a Elasmotherium. It must be made into wool before it can be used.</description>
+							<graphicData>
+								<color>(60,50,41)</color>
+							</graphicData>
+							<stuffProps>
+								<color>(60,50,41)</color>
+							</stuffProps>
+							<butcherProducts>
+								<ElasmotheriumWool>25</ElasmotheriumWool>
+							</butcherProducts>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "ElasmotheriumWool"]/woolDef</xpath>
+					<value>
+						<woolDef>BWP_elasmotheriumFleece</woolDef>
+					</value>
+				</li>	
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "Elasmotherium"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "Elasmotherium"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "Elasmotherium"]/butcherProducts</xpath>
+					<value>
+						<BWP_elasmotheriumFleece>100</BWP_elasmotheriumFleece>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="BWP_FleeceBase">
+							<defName>BWP_josephoartigasiaFleece</defName>
+							<label>josephoartigasia fleece</label>
+							<description>The untreated fleece of a Josephoartigasia. It must be made into wool before it can be used.</description>
+							<graphicData>
+								<color>(135,112,80)</color>
+							</graphicData>
+							<stuffProps>
+								<color>(135,112,80)</color>
+							</stuffProps>
+							<butcherProducts>
+								<JosephoartigasiaWool>25</JosephoartigasiaWool>
+							</butcherProducts>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "JosephoartigasiaWool"]/woolDef</xpath>
+					<value>
+						<woolDef>BWP_josephoartigasiaFleece</woolDef>
+					</value>
+				</li>	
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "Josephoartigasia"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "Josephoartigasia"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "Josephoartigasia"]/butcherProducts</xpath>
+					<value>
+						<BWP_josephoartigasiaFleece>100</BWP_josephoartigasiaFleece>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
 	<!-- Vegetable Garden -->
 	
 	<Operation Class="PatchOperationFindMod">
@@ -623,6 +777,37 @@
 					</match>
 				</li>
 				
+		<!-- VGP and Megafauna -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Megafauna</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_mammothFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Woolly Mammoth. It must be made in to wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_elasmotheriumFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Elasmotherium. It must be made in to wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_josephoartigasiaFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Josephoartigasia. It must be made in to wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+
 			</operations>
 		</match>
 	</Operation>

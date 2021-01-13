@@ -6,10 +6,12 @@
 	<li>1.2</li>
   </supportedVersions>
   <packageId>troopersmith1.BWP</packageId>
-  <description>Shearable animals now yield fleece instead of wool, which needs to be processed into usable wool.
+  <description>This mod is a hybrid of Slightly More Realistic Wool Production, and Shear Those Corpses. Also, I got tired of waiting for compatibility patches so I decided to make this for myself, figured I would put it on the workshop for anyone else who wanted it.
+  
+Shearable animals now yield fleece instead of wool, which needs to be processed into usable wool.
 Also adds some fleece as a butcher product when butchering shearable animals.
   
-Includes compatibility patches for Medieval Times, VGP, and Vanilla Animals Expanded
+Includes compatibility patches for Medieval Times, VGP, Legacy Ark, Megafauna and Vanilla Animals Expanded
 
 This mod uses resources from Slightly More Realistic Wool Production by CrunchyDuck, used under license</description>
 </ModMetaData>
