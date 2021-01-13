@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<ThingCategoryDef>
+		<defName>BWP_Fleece</defName>
+		<label>fleece</label>
+		<parent>ResourcesRaw</parent>
+		<iconPath>UI/Icons/ThingCategories/Textiles</iconPath>
+		<resourceReadoutRoot>true</resourceReadoutRoot>
+	</ThingCategoryDef>
+	
+	<ThingCategoryDef>
+		<defName>BWP_Wool</defName>
+		<label>wool</label>
+		<parent>Textiles</parent>
+		<iconPath>UI/Icons/ThingCategories/Textiles</iconPath>
+		<resourceReadoutRoot>true</resourceReadoutRoot>
+    </ThingCategoryDef>
+	
+</Defs>

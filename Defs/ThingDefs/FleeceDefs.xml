@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+
+	<!-- Base -->
+
+	<ThingDef Abstract="True" ParentName="OrganicProductBase" Name="BWP_FleeceBase">
+		<soundInteract>Standard_Drop</soundInteract>
+		<soundDrop>Standard_Drop</soundDrop>
+		<stackLimit>100</stackLimit>
+		<thingCategories>
+			<li>BWP_Fleece</li>
+		</thingCategories>
+		<graphicData>
+			<texPath>Things/Item/Resource/fleece</texPath>
+		</graphicData>
+		<statBases>
+			<MarketValue>1</MarketValue>
+			<Flammability>2</Flammability>
+			<DeteriorationRate>8</DeteriorationRate>
+		</statBases>
+	</ThingDef>
+
+
+	<!-- Fleeces -->
+
+	<ThingDef ParentName="BWP_FleeceBase">
+		<defName>BWP_megaslothFleece</defName>
+		<label>megasloth fleece</label>
+		<description>The untreated fleece of a Megasloth. It must be made into wool before it can be used.</description>
+		<graphicData>
+			<color>(189,161,116)</color>
+		</graphicData>
+		<stuffProps>
+			<color>(189,161,116)</color>
+		</stuffProps>
+		<butcherProducts>
+			<WoolMegasloth>25</WoolMegasloth>
+		</butcherProducts>
+	</ThingDef>
+  
+	<ThingDef ParentName="BWP_FleeceBase">
+		<defName>BWP_muffaloFleece</defName>
+		<label>muffalo fleece</label>
+		<description>The untreated fleece of a Muffalo. It must be made into wool before it can be used.</description>
+		<graphicData>
+			<color>(179,192,186)</color>
+		</graphicData>
+		<stuffProps>
+			<color>(179,192,186)</color>
+		</stuffProps>
+		<butcherProducts>
+			<WoolMuffalo>25</WoolMuffalo>
+		</butcherProducts>
+	</ThingDef>
+  
+	<ThingDef ParentName="BWP_FleeceBase">
+		<defName>BWP_alpacaFleece</defName>
+		<label>alpaca fleece</label>
+		<description>The untreated fleece of an Alpaca. It must be made into wool before it can be used.</description>
+		<graphicData>
+			<color>(237,216,174)</color>
+		</graphicData>
+		<stuffProps>
+			<color>(180,148,109)</color>
+		</stuffProps>
+		<butcherProducts>
+			<WoolAlpaca>25</WoolAlpaca>
+		</butcherProducts>
+	</ThingDef>
+  
+	<ThingDef ParentName="BWP_FleeceBase">
+		<defName>BWP_sheepFleece</defName>
+		<label>sheep fleece</label>
+		<description>The untreated fleece of a Sheep. It must be made into wool before it can be used.</description>
+		<graphicData>
+			<color>(219,214,209)</color>
+		</graphicData>
+		<stuffProps>
+			<color>(219,214,209)</color>
+		</stuffProps>
+		<butcherProducts>
+			<WoolSheep>25</WoolSheep>
+		</butcherProducts>
+	</ThingDef>
+  
+	<ThingDef ParentName="BWP_FleeceBase">
+		<defName>BWP_bisonFleece</defName>
+		<label>bison fleece</label>
+		<description>The untreated fleece of a Bison. It must be made into wool before it can be used.</description>
+		<graphicData>
+			<color>(104,69,45)</color>
+		</graphicData>
+		<stuffProps>
+			<color>(104,69,45)</color>
+		</stuffProps>
+		<butcherProducts>
+			<WoolBison>25</WoolBison>
+		</butcherProducts>
+	</ThingDef>
+
+</Defs>
+

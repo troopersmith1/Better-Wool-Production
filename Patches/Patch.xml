@@ -1,0 +1,630 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Patch>
+  
+	<!-- Core -->
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>*/ThingDef[@Name = "WoolBase"]/thingCategories</xpath>
+		<value>
+			<thingCategories>
+				<li>BWP_Wool</li>
+			</thingCategories>
+		</value>
+	</Operation>
+	
+  	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolAlpaca"]/woolDef</xpath>
+		<value>
+			<woolDef>BWP_alpacaFleece</woolDef>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName = "Alpaca"]/butcherProducts</xpath>
+				<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Alpaca"]</xpath>
+				<value>
+					<butcherProducts>
+					</butcherProducts>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "Alpaca"]/butcherProducts</xpath>
+		<value>
+			<BWP_alpacaFleece>25</BWP_alpacaFleece>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolMegasloth"]/woolDef</xpath>
+		<value>
+			<woolDef>BWP_megaslothFleece</woolDef>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName = "Megasloth"]/butcherProducts</xpath>
+				<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Megasloth"]</xpath>
+				<value>
+					<butcherProducts>
+					</butcherProducts>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "Megasloth"]/butcherProducts</xpath>
+		<value>
+			<BWP_megaslothFleece>75</BWP_megaslothFleece>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolMuffalo"]/woolDef</xpath>
+		<value>
+			<woolDef>BWP_muffaloFleece</woolDef>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName = "Muffalo"]/butcherProducts</xpath>
+				<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Muffalo"]</xpath>
+				<value>
+					<butcherProducts>
+					</butcherProducts>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "Muffalo"]/butcherProducts</xpath>
+		<value>
+			<BWP_muffaloFleece>50</BWP_muffaloFleece>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolBison"]/woolDef</xpath>
+		<value>
+			<woolDef>BWP_bisonFleece</woolDef>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName = "Bison"]/butcherProducts</xpath>
+				<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Bison"]</xpath>
+				<value>
+					<butcherProducts>
+					</butcherProducts>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "Bison"]/butcherProducts</xpath>
+		<value>
+			<BWP_bisonFleece>50</BWP_bisonFleece>
+		</value>
+	</Operation>
+	
+	<Operation Class="PatchOperationReplace">
+		<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolSheep"]/woolDef</xpath>
+		<value>
+			<woolDef>BWP_sheepFleece</woolDef>
+		</value>
+	</Operation>	
+	
+	<Operation Class="PatchOperationSequence">
+		<success>Always</success>
+		<operations>
+			<li Class="PatchOperationTest">
+				<xpath>/Defs/ThingDef[defName = "Sheep"]/butcherProducts</xpath>
+				<success>Invert</success>
+			</li>
+			<li Class="PatchOperationAdd">
+				<xpath>/Defs/ThingDef[defName = "Sheep"]</xpath>
+				<value>
+					<butcherProducts>
+					</butcherProducts>
+				</value>
+			</li>
+		</operations>
+	</Operation>
+
+	<Operation Class="PatchOperationAdd">
+		<xpath>/Defs/ThingDef[defName = "Sheep"]/butcherProducts</xpath>
+		<value>
+			<BWP_sheepFleece>25</BWP_sheepFleece>
+		</value>
+	</Operation>
+
+	
+	<!-- Medieval Times -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Medieval Times</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>*/RecipeDef[@Name =
+						   "ProcessWoolBase"]/recipeUsers</xpath>
+					<value>
+						<li>MedTimes_TailoringStation</li>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- Vanilla Animals Expanded -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Animals Expanded — Extreme Desert</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="BWP_FleeceBase">
+							<defName>BWP_camelFleece</defName>
+							<label>camel fleece</label>
+							<description>The untreated fleece of a Camel. It must be made into wool before it can be used.</description>
+							<graphicData>
+								<color>(211,179,118)</color>
+							</graphicData>
+							<stuffProps>
+								<color>(211,179,118)</color>
+							</stuffProps>
+							<butcherProducts>
+								<WoolCamel>25</WoolCamel>
+							</butcherProducts>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolCamel"]/woolDef</xpath>
+					<value>
+						<woolDef>BWP_camelFleece</woolDef>
+					</value>
+				</li>	
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "AEXP_Camel"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "AEXP_Camel"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "AEXP_Camel"]/butcherProducts</xpath>
+					<value>
+						<BWP_camelFleece>50</BWP_camelFleece>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Animals Expanded — Tundra</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="BWP_FleeceBase">
+							<defName>BWP_muskoxFleece</defName>
+							<label>musk ox fleece</label>
+							<description>The untreated fleece of a Musk Ox. It must be made into wool before it can be used.</description>
+							<graphicData>
+								<color>(94,76,66)</color>
+							</graphicData>
+							<stuffProps>
+								<color>(94,76,66)</color>
+							</stuffProps>
+							<butcherProducts>
+								<AEXP_MuskOxWool>25</AEXP_MuskOxWool>
+							</butcherProducts>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "AEXP_MuskOxWool"]/woolDef</xpath>
+					<value>
+						<woolDef>BWP_muskoxFleece</woolDef>
+					</value>
+				</li>	
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "AEXP_Muskox"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "AEXP_Muskox"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "AEXP_Muskox"]/butcherProducts</xpath>
+					<value>
+						<BWP_muskoxFleece>50</BWP_muskoxFleece>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- Legacy Ark -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Legacy Ark</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="BWP_FleeceBase">
+							<defName>BWP_finesheepFleece</defName>
+							<label>fine fleece</label>
+							<description>The untreated fleece of a Merino Sheep. It must be made into wool before it can be used.</description>
+							<graphicData>
+								<color>(201,192,181)</color>
+							</graphicData>
+							<stuffProps>
+								<color>(201,192,181)</color>
+							</stuffProps>
+							<butcherProducts>
+								<FineWool>25</FineWool>
+							</butcherProducts>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "FineWool"]/woolDef</xpath>
+					<value>
+						<woolDef>BWP_finesheepFleece</woolDef>
+					</value>
+				</li>
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "AssafSheep"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "AssafSheep"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "AssafSheep"]/butcherProducts</xpath>
+					<value>
+						<BWP_sheepFleece>25</BWP_sheepFleece>
+					</value>
+				</li>
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "AwassiSheep"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "AwassiSheep"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "AwassiSheep"]/butcherProducts</xpath>
+					<value>
+						<BWP_sheepFleece>25</BWP_sheepFleece>
+					</value>
+				</li>
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "BorderLeicesterSheep"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "BorderLeicesterSheep"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "BorderLeicesterSheep"]/butcherProducts</xpath>
+					<value>
+						<BWP_sheepFleece>25</BWP_sheepFleece>
+					</value>
+				</li>
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "JacobsSheep"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "JacobsSheep"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "JacobsSheep"]/butcherProducts</xpath>
+					<value>
+						<BWP_sheepFleece>25</BWP_sheepFleece>
+					</value>
+				</li>
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "LincolnSheep"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "LincolnSheep"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "LincolnSheep"]/butcherProducts</xpath>
+					<value>
+						<BWP_sheepFleece>50</BWP_sheepFleece>
+					</value>
+				</li>
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "MerinoSheep"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "MerinoSheep"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "MerinoSheep"]/butcherProducts</xpath>
+					<value>
+						<BWP_finesheepFleece>100</BWP_finesheepFleece>
+					</value>
+				</li>
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "MouflonSheep"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "MouflonSheep"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "MouflonSheep"]/butcherProducts</xpath>
+					<value>
+						<BWP_sheepFleece>25</BWP_sheepFleece>
+					</value>
+				</li>
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "SuffolkSheep"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "SuffolkSheep"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "SuffolkSheep"]/butcherProducts</xpath>
+					<value>
+						<BWP_sheepFleece>25</BWP_sheepFleece>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- Vegetable Garden -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>VGP Garden Fabrics</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[@Name="ProcessWoolBase"]/recipeUsers</xpath>
+					<value>
+						<recipeUsers>
+							<li>TableLoom</li>
+							<li>TableElecLoom</li>
+						</recipeUsers>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="BWP_megaslothFleece"]/description</xpath>
+					<value>
+						<description>The untreated fleece of a Megasloth. It must be made in to wool at a Tailor's loom before it can be used.</description>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="BWP_muffaloFleece"]/description</xpath>
+					<value>
+						<description>The untreated fleece of a Muffalo. It must be made in to wool at a Tailor's loom before it can be used.</description>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="BWP_alpacaFleece"]/description</xpath>
+					<value>
+						<description>The untreated fleece of an Alpaca. It must be made in to wool at a Tailor's loom before it can be used.</description>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="BWP_bisonFleece"]/description</xpath>
+					<value>
+						<description>The untreated fleece of a Bison. It must be made in to wool at a Tailor's loom before it can be used.</description>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="BWP_sheepFleece"]/description</xpath>
+					<value>
+						<description>The untreated fleece of a Sheep. It must be made in to wool at a Tailor's loom before it can be used.</description>
+					</value>
+				</li>
+	  
+		<!-- VGP and VAE -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Animals Expanded — Tundra</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_muskoxFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Musk Ox. It must be made in to wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Animals Expanded — Extreme Desert</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_camelFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Camel. It must be made in to wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+		<!-- VGP and Legacy Ark -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Legacy Ark</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_finesheepFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Merino Sheep. It must be made in to wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+			</operations>
+		</match>
+	</Operation>
+  
+</Patch>
