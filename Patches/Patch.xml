@@ -573,7 +573,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/ThingDef[defName = "WoollyMammoth"]/butcherProducts</xpath>
 					<value>
-						<BWP_mammothFleece>100</BWP_mammothFleece>
+						<BWP_mammothFleece>150</BWP_mammothFleece>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
@@ -620,7 +620,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/ThingDef[defName = "Elasmotherium"]/butcherProducts</xpath>
 					<value>
-						<BWP_elasmotheriumFleece>100</BWP_elasmotheriumFleece>
+						<BWP_elasmotheriumFleece>125</BWP_elasmotheriumFleece>
 					</value>
 				</li>
 				<li Class="PatchOperationAdd">
@@ -667,7 +667,7 @@
 				<li Class="PatchOperationAdd">
 					<xpath>/Defs/ThingDef[defName = "Josephoartigasia"]/butcherProducts</xpath>
 					<value>
-						<BWP_josephoartigasiaFleece>100</BWP_josephoartigasiaFleece>
+						<BWP_josephoartigasiaFleece>125</BWP_josephoartigasiaFleece>
 					</value>
 				</li>
 			</operations>
