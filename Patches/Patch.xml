@@ -306,6 +306,66 @@
 		</match>
 	</Operation>
 	
+	<!-- Vanilla Factions Expanded - Vikings -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Vanilla Factions Expanded - Vikings</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="BWP_FleeceBase">
+							<defName>BWP_woolcowFleece</defName>
+							<label>wooly cow fleece</label>
+							<description>The untreated fleece of a Wooly Cow. It must be made into wool before it can be used.</description>
+							<graphicData>
+								<color>(133,65,36)</color>
+							</graphicData>
+							<stuffProps>
+								<color>(133,65,36)</color>
+							</stuffProps>
+							<butcherProducts>
+								<VFEV_WoolCow>25</VFEV_WoolCow>
+							</butcherProducts>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "VFEV_WoolCow"]/woolDef</xpath>
+					<value>
+						<woolDef>BWP_woolcowFleece</woolDef>
+					</value>
+				</li>	
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "VFEV_WoolyCow"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "VFEV_WoolyCow"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "VFEV_WoolyCow"]/butcherProducts</xpath>
+					<value>
+						<BWP_woolcowFleece>50</BWP_woolcowFleece>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
 	<!-- Legacy Ark -->
 	
 	<Operation Class="PatchOperationFindMod">
@@ -674,6 +734,173 @@
 		</match>
 	</Operation>
 	
+	<!-- Anima Animals -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Anima Animals</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="BWP_FleeceBase">
+							<defName>BWP_animathrumboFleece</defName>
+							<label>anima thrumbo fleece</label>
+							<description>The untreated fleece of an Anima Thrumbo. It must be made into wool before it can be used.</description>
+							<graphicData>
+								<color>(180.3, 215.5, 202.4)</color>
+							</graphicData>
+							<stuffProps>
+								<color>(180.3, 215.5, 202.4)</color>
+							</stuffProps>
+							<butcherProducts>
+								<Leather_AnimaThrumbo>25</Leather_AnimaThrumbo>
+							</butcherProducts>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "Leather_AnimaThrumbo"]/woolDef</xpath>
+					<value>
+						<woolDef>BWP_animathrumboFleece</woolDef>
+					</value>
+				</li>	
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "AnimaThrumbo"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "AnimaThrumbo"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "AnimaThrumbo"]/butcherProducts</xpath>
+					<value>
+						<BWP_animathrumboFleece>50</BWP_animathrumboFleece>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="BWP_FleeceBase">
+							<defName>BWP_animayakFleece</defName>
+							<label>anima yak fleece</label>
+							<description>The untreated fleece of an Anima Yak. It must be made into wool before it can be used.</description>
+							<graphicData>
+								<color>(106,140,128)</color>
+							</graphicData>
+							<stuffProps>
+								<color>(106,140,128)</color>
+							</stuffProps>
+							<butcherProducts>
+								<WoolAnimaYak>25</WoolAnimaYak>
+							</butcherProducts>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolAnimaYak"]/woolDef</xpath>
+					<value>
+						<woolDef>BWP_animayakFleece</woolDef>
+					</value>
+				</li>	
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "AnimaYak"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "AnimaYak"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "AnimaYak"]/butcherProducts</xpath>
+					<value>
+						<BWP_animayakFleece>50</BWP_animayakFleece>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- ReGrowth - Extinct Animals Pack -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>[HLX] ReGrowth - Extinct Animals Pack</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="BWP_FleeceBase">
+							<defName>BWP_woollyrhinoFleece</defName>
+							<label>woolly rhino fleece</label>
+							<description>The untreated fleece of an Woolly Rhino. It must be made into wool before it can be used.</description>
+							<graphicData>
+								<color>(92,73,60)</color>
+							</graphicData>
+							<stuffProps>
+								<color>(92,73,60)</color>
+							</stuffProps>
+							<butcherProducts>
+								<RG-EAP_WoollyRhinoWool>25</RG-EAP_WoollyRhinoWool>
+							</butcherProducts>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "RG-EAP_WoollyRhinoWool"]/woolDef</xpath>
+					<value>
+						<woolDef>BWP_woollyrhinoFleece</woolDef>
+					</value>
+				</li>	
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "RG-EAP_WoollyRhino"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "RG-EAP_WoollyRhino"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "RG-EAP_WoollyRhino"]/butcherProducts</xpath>
+					<value>
+						<BWP_woollyrhinoFleece>100</BWP_woollyrhinoFleece>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
 	<!-- Vegetable Garden -->
 	
 	<Operation Class="PatchOperationFindMod">
@@ -802,6 +1029,69 @@
 								<xpath>/Defs/ThingDef[defName="BWP_josephoartigasiaFleece"]/description</xpath>
 								<value>
 									<description>The untreated fleece of a Josephoartigasia. It must be made in to wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+		<!-- VGP and VFE Vikings -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Factions Expanded - Vikings</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_woolcowFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Wooly Cow. It must be made in to wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+		<!-- VGP and Anima Animals -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Anima Animals</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_animathrumboFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of an Anima Thrumbo. It must be made in to wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_animayakFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of an Anima Yak. It must be made in to wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+		<!-- VGP and ReGrowth - Extinct Animals Pack -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>[HLX] ReGrowth - Extinct Animals Pack</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_woollyrhinoFleeceFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of an Woolly Rhino. It must be made in to wool at a Tailor's loom before it can be used.</description>
 								</value>
 							</li>
 						</operations>
