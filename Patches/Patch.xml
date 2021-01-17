@@ -901,6 +901,101 @@
 		</match>
 	</Operation>
 	
+	<!-- Mamuffalo -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Mamuffalo</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="BWP_FleeceBase">
+							<defName>BWP_MamuffaloFleece</defName>
+							<label>mamuffalo fleece</label>
+							<description>The untreated fleece of an Mamuffalo. It must be made into wool before it can be used.</description>
+							<graphicData>
+								<color>(139,93,35)</color>
+							</graphicData>
+							<stuffProps>
+								<color>(139,93,35)</color>
+							</stuffProps>
+							<butcherProducts>
+								<MamuffaloWool>25</MamuffaloWool>
+							</butcherProducts>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "MamuffaloWool"]/woolDef</xpath>
+					<value>
+						<woolDef>BWP_MamuffaloFleece</woolDef>
+					</value>
+				</li>	
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "Mamuffalo"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "Mamuffalo"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "Mamuffalo"]/butcherProducts</xpath>
+					<value>
+						<BWP_MamuffaloFleece>75</BWP_MamuffaloFleece>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- Pygmy muffalo -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Pygmy muffalo</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "PygmyMuffalo"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "PygmyMuffalo"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "PygmyMuffalo"]/butcherProducts</xpath>
+					<value>
+						<BWP_muffaloFleece>25</BWP_muffaloFleece>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
 	<!-- Vegetable Garden -->
 	
 	<Operation Class="PatchOperationFindMod">
