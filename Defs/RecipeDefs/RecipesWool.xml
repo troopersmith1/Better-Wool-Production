@@ -3,10 +3,9 @@
   
   	<RecipeDef Name="ProcessWoolBase" Abstract="True">
 		<jobString>Processing Fleeces.</jobString>
-		<workAmount>1000</workAmount>
+		<workAmount>500</workAmount>
 		<workSpeedStat>GeneralLaborSpeed</workSpeedStat>
 		<workSkill>Crafting</workSkill>
-		<workSkillLearnFactor>0.3</workSkillLearnFactor>
 		<effectWorking>Tailor</effectWorking>
 		<soundWorking>Recipe_Tailor</soundWorking>
 		<recipeUsers>
@@ -20,7 +19,7 @@
 		<defName>ProcessWoolAny</defName>
 		<label>process any fleece</label>
 		<description>Cleans and cards wool fleeces into useable woolen fiber.</description>
-		<workerCounterClass>RecipeWorkerCounter_MakeStoneBlocks</workerCounterClass>
+		<uiIconThing>BWP_sheepFleece</uiIconThing>
 		<ingredients>
 			<li>
 				<filter>
@@ -39,6 +38,37 @@
 		<specialProducts>
 			<li>Butchery</li>
 		</specialProducts>
+	</RecipeDef>
+	
+	<RecipeDef ParentName="ProcessWoolBase">
+		<defName>MakeWoolBlended</defName>
+		<label>make blended wool</label>
+		<description>Combine various types of wool to create a blended wool.</description>
+		<uiIconThing>WoolSheep</uiIconThing>
+		<jobString>Making blended wool.</jobString>
+		<allowMixingIngredients>true</allowMixingIngredients>
+		<targetCountAdjustment>50</targetCountAdjustment>
+		<ingredients>
+			<li>
+				<filter>
+					<categories>
+						<li>BWP_Wool</li>
+					</categories>
+				</filter>
+				<count>25</count>
+			</li>
+		</ingredients>
+		<fixedIngredientFilter>
+			<categories>
+				<li>BWP_Wool</li>
+			</categories>
+			<disallowedThingDefs>
+				<li>WoolBlended</li>
+			</disallowedThingDefs>
+		</fixedIngredientFilter>
+		<products>
+			<WoolBlended>25</WoolBlended>
+		</products>
 	</RecipeDef>
   
 </Defs>
