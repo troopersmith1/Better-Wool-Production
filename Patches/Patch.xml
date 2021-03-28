@@ -1158,6 +1158,66 @@
 		</match>
 	</Operation>
 	
+	<!-- Erin's Mountain Animals -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Erin's Mountain Animals</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="BWP_FleeceBase">
+							<defName>BWP_ArgaliFleece</defName>
+							<label>argali fleece</label>
+							<description>The untreated fleece of an Argali Sheep. It must be made into wool before it can be used.</description>
+							<graphicData>
+								<color>(139,119,102)</color>
+							</graphicData>
+							<stuffProps>
+								<color>(139,119,102)</color>
+							</stuffProps>
+							<butcherProducts>
+								<WoolArgali>25</WoolArgali>
+							</butcherProducts>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "WoolArgali"]/woolDef</xpath>
+					<value>
+						<woolDef>BWP_ArgaliFleece</woolDef>
+					</value>
+				</li>	
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "Argali"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "Argali"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "Argali"]/butcherProducts</xpath>
+					<value>
+						<BWP_ArgaliFleece>35</BWP_ArgaliFleece>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
 	<!-- Vegetable Garden -->
 	
 	<Operation Class="PatchOperationFindMod">
