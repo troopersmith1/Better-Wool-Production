@@ -1218,6 +1218,221 @@
 		</match>
 	</Operation>
 	
+	<!-- Alpha Animals -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Alpha Animals</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="BWP_FleeceBase">
+							<defName>BWP_GreyCoatedMouflonFleece</defName>
+							<label>grey-coated mouflon fleece</label>
+							<description>The untreated fleece of a Grey-coated Mouflon. It must be made into wool before it can be used.</description>
+							<graphicData>
+								<color>(62,62,64)</color>
+							</graphicData>
+							<stuffProps>
+								<color>(62,62,64)</color>
+							</stuffProps>
+							<butcherProducts>
+								<AA_GreyCoatedMouflonWool>25</AA_GreyCoatedMouflonWool>
+							</butcherProducts>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="BWP_FleeceBase">
+							<defName>BWP_ChameleonYakFleeceTemperate</defName>
+							<label>chameleon yak fleece, temperate</label>
+							<description>The untreated fleece of a Chameleon Yak. It must be made into wool before it can be used.</description>
+							<graphicData>
+								<color>(66,47,41)</color>
+							</graphicData>
+							<stuffProps>
+								<color>(66,47,41)</color>
+							</stuffProps>
+							<butcherProducts>
+								<AA_ChameleonYakWoolTemperate>25</AA_ChameleonYakWoolTemperate>
+							</butcherProducts>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="BWP_FleeceBase">
+							<defName>BWP_ChameleonYakFleeceWinter</defName>
+							<label>chameleon yak fleece, winter</label>
+							<description>The untreated fleece of a Chameleon Yak. It must be made into wool before it can be used.</description>
+							<graphicData>
+								<color>(252,253,254)</color>
+							</graphicData>
+							<stuffProps>
+								<color>(252,253,254)</color>
+							</stuffProps>
+							<butcherProducts>
+								<AA_ChameleonYakWoolWinter>25</AA_ChameleonYakWoolWinter>
+							</butcherProducts>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="BWP_FleeceBase">
+							<defName>BWP_ChameleonYakFleeceJungle</defName>
+							<label>chameleon yak fleece, Jungle</label>
+							<description>The untreated fleece of a Chameleon Yak. It must be made into wool before it can be used.</description>
+							<graphicData>
+								<color>(64,72,39)</color>
+							</graphicData>
+							<stuffProps>
+								<color>(64,72,39)</color>
+							</stuffProps>
+							<butcherProducts>
+								<AA_ChameleonYakWoolJungle>25</AA_ChameleonYakWoolJungle>
+							</butcherProducts>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="BWP_FleeceBase">
+							<defName>BWP_ChameleonYakFleeceDesert</defName>
+							<label>chameleon yak fleece, desert</label>
+							<description>The untreated fleece of a Chameleon Yak. It must be made into wool before it can be used.</description>
+							<graphicData>
+								<color>(184,168,110)</color>
+							</graphicData>
+							<stuffProps>
+								<color>(184,168,110)</color>
+							</stuffProps>
+							<butcherProducts>
+								<AA_ChameleonYakWoolDesert>25</AA_ChameleonYakWoolDesert>
+							</butcherProducts>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "AA_GreyCoatedMouflonWool"]/woolDef</xpath>
+					<value>
+						<woolDef>BWP_GreyCoatedMouflonFleece</woolDef>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef/comps/li[@Class = "AlphaBehavioursAndEvents.CompProperties_AnimalProduct"]</xpath>
+					<value>
+						<li Class="AlphaBehavioursAndEvents.CompProperties_AnimalProduct">
+
+							<gatheringIntervalDays>25</gatheringIntervalDays>
+							<resourceAmount>100</resourceAmount>
+							<customResourceString>AA_SeasonalWoolDesc</customResourceString>
+
+							<seasonalItems>
+								<li>BWP_ChameleonYakFleeceTemperate</li>
+								<li>BWP_ChameleonYakFleeceWinter</li>
+								<li>BWP_ChameleonYakFleeceJungle</li>
+								<li>BWP_ChameleonYakFleeceDesert</li>
+							</seasonalItems>
+
+						</li>
+					</value>
+				</li>				
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "AA_GreyCoatedMouflon"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "AA_GreyCoatedMouflon"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "AA_GreyCoatedMouflon"]/butcherProducts</xpath>
+					<value>
+						<BWP_GreyCoatedMouflonFleece>45</BWP_GreyCoatedMouflonFleece>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
+	<!-- Forsakens: Fauna -->
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>Forsakens: Fauna</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs</xpath>
+					<value>
+						<ThingDef ParentName="BWP_FleeceBase">
+							<defName>BWP_NightFleece</defName>
+							<label>night fleece</label>
+							<description>A dark hued fleece. It must be made into wool before it can be used.</description>
+							<graphicData>
+								<color>(45,45,57)</color>
+							</graphicData>
+							<stuffProps>
+								<color>(45,45,57)</color>
+							</stuffProps>
+							<butcherProducts>
+								<FO_NightWool>25</FO_NightWool>
+							</butcherProducts>
+						</ThingDef>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "FO_NightWool"]/woolDef</xpath>
+					<value>
+						<woolDef>BWP_NightFleece</woolDef>
+					</value>
+				</li>	
+				<li Class="PatchOperationSequence">
+					<success>Always</success>
+					<operations>
+						<li Class="PatchOperationTest">
+							<xpath>/Defs/ThingDef[defName = "FO_Thunderox"]/butcherProducts</xpath>
+							<success>Invert</success>
+						</li>
+						<li Class="PatchOperationAdd">
+							<xpath>/Defs/ThingDef[defName = "FO_Thunderox"]</xpath>
+							<value>
+								<butcherProducts>
+								</butcherProducts>
+							</value>
+						</li>
+					</operations>
+				</li>
+				<li Class="PatchOperationAdd">
+					<xpath>/Defs/ThingDef[defName = "FO_Thunderox"]/butcherProducts</xpath>
+					<value>
+						<BWP_NightFleece>75</BWP_NightFleece>
+					</value>
+				</li>
+			</operations>
+		</match>
+	</Operation>
+	
 	<!-- Vegetable Garden -->
 	
 	<Operation Class="PatchOperationFindMod">
