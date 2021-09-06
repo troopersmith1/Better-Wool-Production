@@ -845,7 +845,7 @@
 	
 	<Operation Class="PatchOperationFindMod">
 		<mods>
-			<li>[HLX] ReGrowth - Extinct Animals Pack</li>
+			<li>ReGrowth: Extinct Animals Pack</li>
 		</mods>
 		<match Class="PatchOperationSequence">
 			<success>Always</success>
@@ -864,13 +864,13 @@
 								<color>(92,73,60)</color>
 							</stuffProps>
 							<butcherProducts>
-								<RG-EAP_WoollyRhinoWool>25</RG-EAP_WoollyRhinoWool>
+								<RG-EAP_WoollyRhinocerosWool>25</RG-EAP_WoollyRhinocerosWool>
 							</butcherProducts>
 						</ThingDef>
 					</value>
 				</li>
 				<li Class="PatchOperationReplace">
-					<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "RG-EAP_WoollyRhinoWool"]/woolDef</xpath>
+					<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "RG-EAP_WoollyRhinocerosWool"]/woolDef</xpath>
 					<value>
 						<woolDef>BWP_woollyrhinoFleece</woolDef>
 					</value>
@@ -1675,7 +1675,7 @@
 		
 				<li Class="PatchOperationFindMod">
 					<mods>
-						<li>[HLX] ReGrowth - Extinct Animals Pack</li>
+						<li>ReGrowth: Extinct Animals Pack</li>
 					</mods>
 					<match Class="PatchOperationSequence">
 						<success>Always</success>
