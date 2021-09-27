@@ -1739,6 +1739,455 @@
 						</operations>
 					</match>
 				</li>
+				
+		<!-- VGP and Erin's Mountain Animals -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Erin's Mountain Animals</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_ArgaliFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of an Argali Sheep. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+		<!-- VGP and Alpha Animals -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Alpha Animals</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_GreyCoatedMouflonFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Grey-coated Mouflon. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_ChameleonYakFleeceTemperate"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Chameleon Yak. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_ChameleonYakFleeceWinter"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Chameleon Yak. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_ChameleonYakFleeceJungle"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Chameleon Yak. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_ChameleonYakFleeceDesert"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Chameleon Yak. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+		<!-- VGP and Forsakens: Fauna -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Forsakens: Fauna</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_NightFleece"]/description</xpath>
+								<value>
+									<description>A dark hued fleece. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+		<!-- VGP and Epona Race -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Epona Race</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_Epona_Sheep_Fleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Gordyfu. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+
+			</operations>
+		</match>
+	</Operation>
+	
+	<Operation Class="PatchOperationFindMod">
+		<mods>
+			<li>VGP Garden Fabrics Simplified</li>
+		</mods>
+		<match Class="PatchOperationSequence">
+			<success>Always</success>
+			<operations>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/RecipeDef[@Name="ProcessWoolBase"]/recipeUsers</xpath>
+					<value>
+						<recipeUsers>
+							<li>TableLoom</li>
+							<li>TableElecLoom</li>
+						</recipeUsers>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="BWP_megaslothFleece"]/description</xpath>
+					<value>
+						<description>The untreated fleece of a Megasloth. It must be made into wool at a Tailor's loom before it can be used.</description>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="BWP_muffaloFleece"]/description</xpath>
+					<value>
+						<description>The untreated fleece of a Muffalo. It must be made into wool at a Tailor's loom before it can be used.</description>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="BWP_alpacaFleece"]/description</xpath>
+					<value>
+						<description>The untreated fleece of an Alpaca. It must be made into wool at a Tailor's loom before it can be used.</description>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="BWP_bisonFleece"]/description</xpath>
+					<value>
+						<description>The untreated fleece of a Bison. It must be made into wool at a Tailor's loom before it can be used.</description>
+					</value>
+				</li>
+				<li Class="PatchOperationReplace">
+					<xpath>/Defs/ThingDef[defName="BWP_sheepFleece"]/description</xpath>
+					<value>
+						<description>The untreated fleece of a Sheep. It must be made into wool at a Tailor's loom before it can be used.</description>
+					</value>
+				</li>
+	  
+		<!-- VGP and VAE -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Animals Expanded — Tundra</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_muskoxFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Musk Ox. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Animals Expanded — Extreme Desert</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_camelFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Camel. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+		<!-- VGP and Legacy Ark -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Legacy Ark</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_finesheepFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Merino Sheep. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+		<!-- VGP and Megafauna -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Megafauna</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_mammothFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Woolly Mammoth. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_elasmotheriumFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of an Elasmotherium. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_josephoartigasiaFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Josephoartigasia. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+		<!-- VGP and VFE Vikings -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Vanilla Factions Expanded - Vikings</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_woolcowFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Wooly Cow. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+		<!-- VGP and Anima Animals -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Anima Animals</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_animathrumboFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of an Anima Thrumbo. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_animayakFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of an Anima Yak. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+		<!-- VGP and ReGrowth - Extinct Animals Pack -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>ReGrowth: Extinct Animals Pack</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_woollyrhinoFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Woolly Rhino. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+		<!-- VGP and Mamuffalo -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Mamuffalo</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_MamuffaloFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Mamuffalo. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+		<!-- VGP and Animal Collab Project Vanilla-Style -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Animal Collab Project Vanilla-Style</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_ACPBDireWolfFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Dire Wolf. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_ACPLlamaFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Llama. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_ACPAngoraFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of an Angora Rabbit. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+		<!-- VGP and Erin's Mountain Animals -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Erin's Mountain Animals</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_ArgaliFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of an Argali Sheep. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+		<!-- VGP and Alpha Animals -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Alpha Animals</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_GreyCoatedMouflonFleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Grey-coated Mouflon. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_ChameleonYakFleeceTemperate"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Chameleon Yak. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_ChameleonYakFleeceWinter"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Chameleon Yak. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_ChameleonYakFleeceJungle"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Chameleon Yak. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_ChameleonYakFleeceDesert"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Chameleon Yak. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+		<!-- VGP and Forsakens: Fauna -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Forsakens: Fauna</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_NightFleece"]/description</xpath>
+								<value>
+									<description>A dark hued fleece. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+				
+		<!-- VGP and Epona Race -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Epona Race</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef[defName="BWP_Epona_Sheep_Fleece"]/description</xpath>
+								<value>
+									<description>The untreated fleece of a Gordyfu. It must be made into wool at a Tailor's loom before it can be used.</description>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
 
 			</operations>
 		</match>
