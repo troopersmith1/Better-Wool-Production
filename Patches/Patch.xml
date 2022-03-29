@@ -2189,6 +2189,114 @@
 					</match>
 				</li>
 
+		<!-- Ducks! -->
+		
+				<li Class="PatchOperationFindMod">
+					<mods>
+						<li>Ducks</li>
+					</mods>
+					<match Class="PatchOperationSequence">
+						<success>Always</success>
+						<operations>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs</xpath>
+								<value>
+									<ThingDef ParentName="BWP_FleeceBase">
+										<defName>BWP_BuffledownFleece</defName>
+										<label>buffledown fleece</label>
+										<description>The untreated fleece of a bufflehead duck. It must be made into wool before it can be used.</description>
+										<graphicData>
+											<color>(141,127,131)</color>
+										</graphicData>
+										<stuffProps>
+											<color>(151,127,136)</color>
+										</stuffProps>
+										<butcherProducts>
+											<ZDuck_Buffledown>25</ZDuck_Buffledown>
+										</butcherProducts>
+									</ThingDef>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "ZDuck_Buffledown"]/woolDef</xpath>
+								<value>
+									<woolDef>BWP_BuffledownFleece</woolDef>
+								</value>
+							</li>	
+							<li Class="PatchOperationSequence">
+								<success>Always</success>
+								<operations>
+									<li Class="PatchOperationTest">
+										<xpath>/Defs/ThingDef[defName = "ZDuck_Bufflehead"]/butcherProducts</xpath>
+										<success>Invert</success>
+									</li>
+									<li Class="PatchOperationAdd">
+										<xpath>/Defs/ThingDef[defName = "ZDuck_Bufflehead"]</xpath>
+										<value>
+											<butcherProducts>
+											</butcherProducts>
+										</value>
+									</li>
+								</operations>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName = "ZDuck_Bufflehead"]/butcherProducts</xpath>
+								<value>
+									<BWP_BuffledownFleece>45</BWP_BuffledownFleece>
+								</value>
+							</li>
+
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs</xpath>
+								<value>
+									<ThingDef ParentName="BWP_FleeceBase">
+										<defName>BWP_EiderdownFleece</defName>
+										<label>eiderdown fleece</label>
+										<description>The untreated fleece of a eider pintail. It must be made into wool before it can be used.</description>
+										<graphicData>
+											<color>(196,177,173)</color>
+										</graphicData>
+										<stuffProps>
+											<color>(196,177,173)</color>
+										</stuffProps>
+										<butcherProducts>
+											<ZDuck_Eiderdown>25</ZDuck_Eiderdown>
+										</butcherProducts>
+									</ThingDef>
+								</value>
+							</li>
+							<li Class="PatchOperationReplace">
+								<xpath>/Defs/ThingDef/comps/li[@Class = "CompProperties_Shearable" and woolDef = "ZDuck_Eiderdown"]/woolDef</xpath>
+								<value>
+									<woolDef>BWP_EiderdownFleece</woolDef>
+								</value>
+							</li>	
+							<li Class="PatchOperationSequence">
+								<success>Always</success>
+								<operations>
+									<li Class="PatchOperationTest">
+										<xpath>/Defs/ThingDef[defName = "ZDuck_EiderPintail"]/butcherProducts</xpath>
+										<success>Invert</success>
+									</li>
+									<li Class="PatchOperationAdd">
+										<xpath>/Defs/ThingDef[defName = "ZDuck_EiderPintail"]</xpath>
+										<value>
+											<butcherProducts>
+											</butcherProducts>
+										</value>
+									</li>
+								</operations>
+							</li>
+							<li Class="PatchOperationAdd">
+								<xpath>/Defs/ThingDef[defName = "ZDuck_EiderPintail"]/butcherProducts</xpath>
+								<value>
+									<BWP_EiderdownFleece>70</BWP_EiderdownFleece>
+								</value>
+							</li>
+						</operations>
+					</match>
+				</li>
+
 			</operations>
 		</match>
 	</Operation>
